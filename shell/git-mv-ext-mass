@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+MV_CMD="git mv"
+src=$1
+dest=$2
+sh ./mv_ext_mass $src $dest
+

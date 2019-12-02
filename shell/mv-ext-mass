@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+if [ -z "$MV_CMD" ]
+then
+    MV_CMD="mv"
+fi
+src=$1
+dest=$2
+for f in *.$1; do $MV_CMD -- "$f" "${f%.$1}.$2"; done
+
