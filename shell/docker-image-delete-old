@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+if [ $# -eq 0 ]
+then
+  echo "Error: Argument required: month or week"
+  exit 1
+fi
+docker image ls | grep '$1s ago' | awk '{print }' | xargs --no-run-if-empty docker image rm
